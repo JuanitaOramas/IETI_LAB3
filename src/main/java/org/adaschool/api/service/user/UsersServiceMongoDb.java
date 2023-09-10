@@ -20,30 +20,29 @@ public class UsersServiceMongoDb implements UsersService {
 
     @Override
     public User save(User user) {
-        //TODO implement this method
-        return null;
+
+        return this.userMongoRepository.save(user);
     }
 
     @Override
     public Optional<User> findById(String id) {
-        //TODO implement this method
-        return Optional.empty();
+
+        return this.userMongoRepository.findById(id);
     }
 
     @Override
     public List<User> all() {
-        //TODO implement this method
-        return null;
+        return this.userMongoRepository.findAll();
     }
 
     @Override
     public void deleteById(String id) {
-        //TODO implement this method
+        this.userMongoRepository.deleteById(id);
     }
 
     @Override
     public User update(User user, String userId) {
-        //TODO implement this method
-        return null;
+
+        return this.userMongoRepository.save(user);
     }
 }
